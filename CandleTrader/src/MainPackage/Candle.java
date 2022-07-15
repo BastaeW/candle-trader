@@ -7,14 +7,17 @@ public class Candle
 	private Double closing;
 	private Double volume;
 	private Double cap;
+	private Double median;
 	
-	public Candle(String Date, Double Opening, Double Closing, Double Volume, Double Cap)
+	public Candle(String Date, Double Opening, Double Closing, Double Volume, Double Cap, Double Median)
 	{
 		date = Date;
 		opening = Opening;
 		closing = Closing;
 		volume = Volume;
 		cap = Cap;
+		median = Median;
+		
 	}
 	
 	public String getDate()
@@ -40,5 +43,20 @@ public class Candle
 	public Double getCap()
 	{
 		return cap;
+	}
+	
+	public Double getMedian()
+	{
+		return median;
+	}
+	
+	public void setMedian(Double m)
+	{
+		median=m;
+	}
+	
+	public void setOpening(Candle c, Double b)
+	{
+		c.opening=b;
 	}
 }
